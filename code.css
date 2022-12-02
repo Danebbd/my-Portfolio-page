@@ -1,0 +1,219 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.navMenu {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  background-color: #333;
+
+}
+
+.navMenu a {
+  color: #f6f4e6;
+  text-align: right;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  left: 10%;
+  font-weight: 500;
+  display: inline-flex;
+  margin: 10px;
+}
+
+.navMenu a:hover {
+  color: #fddb3a;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color:  white;
+    flex-wrap: wrap;
+    margin: 50px 50px 50px 15px;
+}
+img {
+    width: 100%;
+    margin: 0 auto;
+}
+.centered {
+    position: relative;
+    text-align: center;
+    flex-wrap: wrap;
+    font-size: 60px;
+}
+.centered2 {
+    position: relative;
+    text-align: center;
+    flex-wrap: wrap;
+    font-size: 60px;
+}
+.container2 {
+    position: relative;
+    display: flex;
+    gap:15px;
+    width: 96%;
+    margin: 25px 25px 25px 25px;
+    background-color:white;
+    max-height: 500px;
+    border-color: #333;
+    border: 3px;
+    flex:1 2 1 200px;
+    flex-direction: row;   
+}
+
+.pfp:first-child {
+    position: flex;
+    flex-shrink: 1;
+    align-self: flex-start;
+    width: 250px;
+}
+.taiga3 {
+    position: absolute;
+    left: 30%;
+    width: 50px;
+    z-index: 5;
+    opacity: 0;
+}
+.animal {
+    position: relative;
+    align-self: flex-end;
+    width: 250px;
+    margin: 0 auto; 
+    z-index: 0;
+    object-fit: contain;
+}
+
+.animal:hover {
+    content: url("Taiga.JPG");
+}
+.textbox{
+    position: flex;
+    display: flex;
+}
+
+.about {
+    position: flex;
+    color: black;
+    text-align: center;
+    max-width: 600px;
+    font-size: 20px;
+    z-index: 6;
+    border:solid black 3px;
+}
+.Drawing {
+    position: absolute;
+    left: 60%;
+    bottom:0%;
+    height:110px;
+    width: auto;
+    z-index: 1;
+}
+.brain {
+    position: absolute;
+    left: 30%;
+    bottom:0%;
+    width: 100px;
+}
+.containerH {
+    position: relative;
+    max-height: 400px;
+    margin: 25px 25px 25px 15px;
+    background-color: hsla(60, 20%, 99%, 0.3);
+    border-radius: 25px;
+    top: 5%;
+    z-index: 3;
+    height: 10%;
+}
+.High {
+    text-decoration: underline;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 5%;
+}
+.highp {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 5%;
+}
+.containerS {
+    position: relative;
+    max-height: 400px;
+    margin: 25px 25px 25px 15px;
+    background-color: hsla(60, 20%, 99%, 0.3);
+    border-radius: 25px;
+    top: 8%;
+    height: 10%;
+}
+.second {
+    text-decoration: underline;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 5%;
+}
+.secondp {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 5%;
+}
+.containerW {
+    position: relative;
+    max-height: 400px;
+    margin: 25px 25px 25px 15px;
+    background-color: hsla(60, 20%, 99%, 0.3);
+    border-radius: 25px;
+    top: 12%;
+    height: 10%;
+}
+.work {
+    text-decoration: underline;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 5%;
+}
+.workp {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 5%;
+}
+.containersq {
+    position: relative;
+    max-height: 400px;
+    margin: 50px 25px 25px 15px;
+    background-color: white;
+    border-radius: 25px;
+    width: 97%; 
+    flex-wrap: wrap;
+    flex: 200px;
+    height: 20%;
+}
+.Sql {
+    text-decoration: none;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 5%;
+}
+.sqli {
+    height: 30px;
+    width: inherit;
+}
+.containerp {
+    position: relative;
+    max-height: 400px;
+    margin: 25px 25px 25px 15px;
+    background-color: white;
+    border-radius: 25px;
+    width: 97%; 
+    height: 20%;
+}
+.python {
+    text-decoration: none;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 5%;
+}
