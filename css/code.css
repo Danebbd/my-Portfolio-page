@@ -1,3 +1,19 @@
+body {
+    background: #272727;
+    font-family: "Montserrat", sans-serif;
+    
+    background-size:cover ;
+    background-repeat: no-repeat, repeat;
+}
+#Home{
+    background-image: url("../bin/images/main_bg.JPG");
+}
+#Good{
+    background-image: url("../bin/images/good_bg.JPG");
+}
+#History{
+    background-image: url("../bin/images/hist_bg.JPG");
+}
 
 * {
   margin: 0;
@@ -30,7 +46,7 @@
 .navMenu a:hover {
   color: #fddb3a;
 }
-.container {
+#container {
     position: relative;
     text-align: center;
     color:  white;
@@ -47,13 +63,7 @@ img {
     flex-wrap: wrap;
     font-size: 60px;
 }
-.centered2 {
-    position: relative;
-    text-align: center;
-    flex-wrap: wrap;
-    font-size: 60px;
-}
-.container2 {
+#container2 {
     position: relative;
     display: flex;
     gap:15px;
@@ -67,20 +77,13 @@ img {
     flex-direction: row;   
 }
 
-.pfp:first-child {
+#pfp:first-child {
     position: flex;
     flex-shrink: 1;
     align-self: flex-start;
     width: 250px;
 }
-.taiga3 {
-    position: absolute;
-    left: 30%;
-    width: 50px;
-    z-index: 5;
-    opacity: 0;
-}
-.animal {
+#animal {
     position: relative;
     align-self: flex-end;
     width: 250px;
@@ -89,8 +92,8 @@ img {
     object-fit: contain;
 }
 
-.animal:hover {
-    content: url("Taiga.JPG");
+#animal:hover {
+    content: url("../bin/images/Taiga.JPG");
 }
 .textbox{
     position: flex;
@@ -106,7 +109,7 @@ img {
     z-index: 6;
     border:solid black 3px;
 }
-.Drawing {
+#Drawing {
     position: absolute;
     left: 60%;
     bottom:0%;
@@ -114,7 +117,7 @@ img {
     width: auto;
     z-index: 1;
 }
-.brain {
+#brain {
     position: absolute;
     left: 30%;
     bottom:0%;
@@ -128,60 +131,20 @@ img {
     border-radius: 25px;
     top: 5%;
     z-index: 3;
-    height: 10%;
+    
 }
-.High {
+.heading {
     text-decoration: underline;
     font-size: 25px;
     text-align: left;
     padding-left: 5%;
 }
-.highp {
+.para {
     font-size: 20px;
     text-align: left;
     padding-left: 5%;
 }
-.containerS {
-    position: relative;
-    max-height: 400px;
-    margin: 25px 25px 25px 15px;
-    background-color: hsla(60, 20%, 99%, 0.3);
-    border-radius: 25px;
-    top: 8%;
-    height: 10%;
-}
-.second {
-    text-decoration: underline;
-    font-size: 25px;
-    text-align: left;
-    padding-left: 5%;
-}
-.secondp {
-    font-size: 20px;
-    text-align: left;
-    padding-left: 5%;
-}
-.containerW {
-    position: relative;
-    max-height: 400px;
-    margin: 25px 25px 25px 15px;
-    background-color: hsla(60, 20%, 99%, 0.3);
-    border-radius: 25px;
-    top: 12%;
-    height: 10%;
-}
-.work {
-    text-decoration: underline;
-    font-size: 25px;
-    text-align: left;
-    padding-left: 5%;
-}
-.workp {
-    font-size: 20px;
-    text-align: left;
-    padding-left: 5%;
-}
-.containersq {
+#containersq {
     position: relative;
     max-height: 400px;
     margin: 50px 25px 25px 15px;
@@ -192,28 +155,40 @@ img {
     flex: 200px;
     height: 20%;
 }
-.Sql {
-    text-decoration: none;
+h1 {
     font-size: 25px;
     text-align: left;
-    padding-left: 5%;
+    padding-left: 10px;
 }
-.sqli {
+#sqli {
     height: 30px;
     width: inherit;
 }
-.containerp {
+#containerp {
     position: relative;
+    display: flex;
     max-height: 400px;
     margin: 25px 25px 25px 15px;
     background-color: white;
     border-radius: 25px;
     width: 97%; 
     height: 20%;
+    overflow: hidden;
 }
-.python {
-    text-decoration: none;
+h2 {
+    display:table-cell;
     font-size: 25px;
     text-align: left;
-    padding-left: 5%;
+    padding-top:10px ;
+    padding-left: 10px;
+}
+ul{
+    display: table-cell;
+    padding-left: 15%;
+   
+}
+p {
+    display: table-cell;
+    padding-top: 15px;
+
 }
