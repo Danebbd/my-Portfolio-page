@@ -97,22 +97,26 @@ img {
 }
 .textbox{
     position: flex;
-    display: flex;
+    z-index: 6;
+    border:solid black 3px;
+    color: black;
 }
-
+h3{
+    text-align: center;
+    text-decoration: underline;
+    
+}
 .about {
-    position: flex;
     color: black;
     text-align: center;
     max-width: 600px;
     font-size: 20px;
-    z-index: 6;
-    border:solid black 3px;
+    
 }
 #Drawing {
     position: absolute;
     left: 60%;
-    bottom:0%;
+    bottom:1%;
     height:110px;
     width: auto;
     z-index: 1;
@@ -120,7 +124,7 @@ img {
 #brain {
     position: absolute;
     left: 30%;
-    bottom:0%;
+    bottom:1%;
     width: 100px;
 }
 .containerH {
