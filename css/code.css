@@ -95,7 +95,7 @@ body {
 #imgContainer {
     
     justify-content: space-between;
-    gap: 50px;
+    
     flex-direction: column;
 }
 .textbox{
@@ -119,7 +119,7 @@ h3{
 }
 #Drawing {
     position: relative;
-    left: 60%;
+    
     bottom:1%;
     height:110px;
     width: auto;
@@ -127,7 +127,7 @@ h3{
 }
 #brain {
     position: relative;
-    left: 30%;
+    
     bottom:1%;
     width: 100px;
 }
