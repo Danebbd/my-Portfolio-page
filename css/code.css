@@ -63,19 +63,20 @@ body {
 #container2 {
     position: relative;
     display: flex;
-    gap:10%;
+    gap: 10%;
     margin: 25px 25px 25px 25px;
-    background-color:white;
+    background-color:rgba(255,255,255,0.4);
     border-color: #333;
     border: 3px;
-    flex:1 2 1 200px;
     flex-direction: row; 
     flex-wrap: wrap; 
     flex-grow: 1;
+    justify-content: space-evenly;
 }
 
 #pfp:first-child {
     position: flex;
+    margin: 0 auto;
     flex-shrink: 1;
     max-width: 250px;
     object-fit: contain;
@@ -92,17 +93,17 @@ body {
 #animal:hover {
     content: url("../bin/images/Taiga.JPG");
 }
-#imgContainer {
-    
-    justify-content: space-between;
-    
-    flex-direction: column;
+#imgContainer {   
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
 .textbox{
     position: flex;
     z-index: 6;
     border:solid black 3px;
     color: black;
+    background-color: white;
 }
 h3{
     text-align: center;
@@ -200,3 +201,25 @@ p {
     padding-top: 15px;
 
 }
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #container2{
+        flex-direction: column;
+    }
+    #container{
+        margin: 80px 50px 50px 15px;
+    }
+    .centered{
+        font-size: larger;
+
+    }
+    .navMenu{
+        font-size: x-small;
+    }
+    #pfp{
+        height: 150px;
+    }
+    #animal{
+       height: 150px; 
+    }
+  }
