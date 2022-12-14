@@ -6,12 +6,16 @@ let equation = '';
 
 
     /*reads the id of button with click event*/
-    let numberButtons = document.getElementsByClassName("numberButton");
-    for (let button of numberButtons){
-        button.addEventListener("click",() => document.getElementById("Textarea").innerText += button.id)
-    }
+let numberButtons = document.getElementsByClassName("numberButton");
+for (let button of numberButtons){
+    button.addEventListener("click",() => document.getElementById("Textarea").innerText += button.id)
+}
 
-
+function getNumberfromTextArea(){
+    result = document.getElementById("TextArea").innerText;
+    document.getElementById("TextArea").innerText = ''
+    return result
+}
 /* Functions
 function printNum(value){/*Used to test if which variable to add the next number and print the values 
     if (oper == ''){
@@ -39,7 +43,7 @@ function calculate(n1,operator,n2){/*gets the two numbers and operator then does
         result = parseFloat(n1) + parseFloat(n2);
       } else if (operator === 'minus') {
         result = parseFloat(n1) - parseFloat(n2);
-      } else if (operator === 'times') {
+      } else if (operator  === 'times') {
         result = parseFloat(n1) * parseFloat(n2);
       } else if (operator === 'divide') {
         if (n2 === 0 ){
