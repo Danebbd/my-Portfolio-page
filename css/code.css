@@ -247,6 +247,7 @@ button{
     flex-wrap: wrap;
     background-color:darkblue ;
     border: solid darkblue 10px;
+    margin-top: 3%;
    
 }
 
