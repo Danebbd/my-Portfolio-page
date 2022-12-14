@@ -201,6 +201,55 @@ p {
     padding-top: 15px;
 
 }
+#screen{
+    border: solid, black, 3xp ;
+    width: 400px;
+    height: 100px;
+    background-color: black;
+}
+
+#Textarea{
+    color: white;
+    font-size: x-large;
+    text-align: right;
+    
+
+}
+
+#equation{
+    text-align: left;
+    position: relative;
+    color: white;
+    padding-left: 2%;
+    font-size: large;
+}
+
+#ButtonArea{
+    display: grid;
+    width: 300px;
+    size : 100px;
+    grid-template-columns: 100px 100px 100px 100px ;
+    grid-template-rows: 100px 100px 100px 100px 100px;
+    }
+
+button{
+
+    font-size: x-large;
+
+}
+#equals{
+    grid-row: 2 / 6;
+    grid-column: 4;
+}
+#Calc{
+    display:flex;
+    width: 400px;
+    flex-wrap: wrap;
+    background-color:darkblue ;
+    border: solid darkblue 10px;
+   
+}
+
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     #container2{
@@ -222,4 +271,15 @@ p {
     #animal{
        height: 150px; 
     }
+    #Calc{
+        width: 100%;
+    } 
+    #screen{
+        width:100%;
+    }
+    #ButtonArea{
+        width: 75%;
+        size : 25%;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
   }
