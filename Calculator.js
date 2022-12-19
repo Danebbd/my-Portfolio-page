@@ -1,60 +1,84 @@
 /* Variables*/
-let num1 = '';
-let num2 = '';
-let oper = '';
-let equation = '';
+const equation = [];
 
 
     /*reads the id of button with click event*/
 let numberButtons = document.getElementsByClassName("numberButton");
 for (let button of numberButtons){
-    button.addEventListener("click",() => document.getElementById("Textarea").innerText += button.id)
-}
-
-function getNumberfromTextArea(){
-    result = document.getElementById("TextArea").innerText;
-    document.getElementById("TextArea").innerText = ''
-    return result
-}
-/* Functions
-function printNum(value){/*Used to test if which variable to add the next number and print the values 
-    if (oper == ''){
-    num1 = num1 + value;
-    equation = equation + value;
-    document.getElementById("Textarea").innerText = num1;
-    } 
-    if (oper != ''){
-        num2 = num2 + value
-        equation = equation + value;
-        document.getElementById("Textarea").innerText = num2;
+    button.addEventListener("click",() => {document.getElementById("equation").innerText += button.id
+        document.getElementById("Textarea").innerText += button.id
         }
-    document.getElementById("equation") .innerText = equation;
-} */
+    )    
+}
 
-function ifNum2exists(){/*Checks for second value and calculates. Resets num2*/
-    if (num2 != ''){
-        num1 = calculate(num1,oper,num2);
-        num2 = '';
+function pushNumberfromTextAreatoArray(){
+    let result = document.getElementById("Textarea").innerText;
+    document.getElementById("Textarea").innerText = '';
+    equation.push(result);
+    console.log[equation]
+}
+
+function calculate(){
+    lenghtOfarray = equation.length;
+    for (var i = 0 ; i < lenghtOfarray ; i++){
+        console.log(equation[i])
+        if (equation[i]  == 'times') {
+            let result = parseFloat(equation[i-1]) * parseFloat(equation[i+1]);
+            equation[i] = result;
+            equation.splice(i-1,1);
+            equation.splice(i,1);
+        }
     }
+    for (var i = 0 ; i < lenghtOfarray ; i++){
+        if (equation[i]  == 'divide') {
+            let result = parseFloat(equation[i-1]) / parseFloat(equation[i+1]);
+            equation[i] = result;
+            equation.splice(i-1,1);
+            equation.splice(i, 1);
+        }
+    }
+    for (var i = 0 ; i < lenghtOfarray ; i++){
+        if (equation[i]  == 'plus') {
+            let result = parseFloat(equation[i-1]) + parseFloat(equation[i+1]);
+            equation[i] = result;
+            equation.splice(i-1,1);
+            equation.splice(i, 1);
+        }
+    }
+    for (var i = 0 ; i < lenghtOfarray ; i++){
+        if (equation[i]  == 'minus') {
+            let result = parseFloat(equation[i-1]) - parseFloat(equation[i+1]);
+            equation[i] = result;
+            equation.splice(i-1,1);
+            equation.splice(i, 1);
+        }
+    }
+    document.getElementById("Textarea").innerText = equation;
 }
 
-function calculate(n1,operator,n2){/*gets the two numbers and operator then does the calculation*/
-    if (operator === 'plus') {
-        result = parseFloat(n1) + parseFloat(n2);
-      } else if (operator === 'minus') {
-        result = parseFloat(n1) - parseFloat(n2);
-      } else if (operator  === 'times') {
-        result = parseFloat(n1) * parseFloat(n2);
-      } else if (operator === 'divide') {
-        if (n2 === 0 ){
-            document.getElementById("Textarea").innerText= 'ERROR';
-        }
-        else{
-            result = parseFloat(n1) / parseFloat(n2);
-        }
-      }
-      num1 = result;
-      return result;
+function testIfPreviousArrayisaOperator(operator){
+    lenghtOfarray = equation.length;
+    let value = equation[lenghtOfarray-2];
+    if (value == 'minus' || value == 'plus' || value == 'divide' || value == 'times') {
+        equation[lenghtOfarray - 1] = operator;
+        let getelement = document.getElementById("equation").innerText;
+        getelement = getelement.substring(0, getelement.length - 1);
+        document.getElementById("equation").innerText = getelement;
+    }  
+        
+}
+function removeLastCharacter(){
+    let getelement = document.getElementById("equation").innerText;
+    getelement = getelement.substring(0, getelement.length - 1);
+    document.getElementById("equation").innerText = getelement;
+    lenghtOfarray = equation.length;
+    let value = equation[lenghtOfarray-2];
+    if (value != 'minus' || value != 'plus' || value != 'divide' || value != 'times') {
+        let getelement = document.getElementById("Textarea").innerText;
+        getelement = getelement.substring(0, getelement.length - 1);
+        document.getElementById("Textarea").innerText = getelement;
+    } 
+    
 }
 
 /*Buttons*/
@@ -62,70 +86,50 @@ function buttonComma() {
     printNum(".");
     equation = equation + value;
     document.getElementById("equation") .innerText = equation;
+    document.getElementById("Textarea").innerText += '.';
+    document.getElementById("equation").innerText += '.';
 }
 
 function buttonClear() {
-    num1 = '';
-    num2 = '';
-    oper = '';
-    equation = '';
-    document.getElementById("equation") .innerText = equation;
+    equation.splice(0,equation.length)
+    document.getElementById("equation") .innerText = '';
     document.getElementById("Textarea").innerText= '';
 }
 
 function buttonPlus() {
-    ifNum2exists();
-    oper = 'plus';
-    equation = equation + '+';
-    document.getElementById("Textarea").innerText = num1;
-    equation = equation + value;
-    document.getElementById("equation") .innerText = equation;
+    pushNumberfromTextAreatoArray();
+    testIfPreviousArrayisaOperator('plus');
+    equation.push('plus');
+    document.getElementById("equation").innerText += '+';
+    document.getElementById("Textarea").innerText = '' ;  
 }
 
 function buttonMinus() {
-    ifNum2exists();
-    oper = 'minus';
-    equation = equation + '-';
-    document.getElementById("Textarea").innerText = num1;
-    equation = equation + value;
-    document.getElementById("equation") .innerText = equation;
+    pushNumberfromTextAreatoArray();
+    testIfPreviousArrayisaOperator('minus');
+    equation.push('minus');
+    document.getElementById("equation").innerText += '-';
+    document.getElementById("Textarea").innerText = '';
 }
 
 function buttonTimes(){
-    ifNum2exists();
-    oper='times';
-    equation = equation + '*';
-    document.getElementById("Textarea").innerText = num1;
-    equation = equation + value;
-    document.getElementById("equation") .innerText = equation;
+    pushNumberfromTextAreatoArray()
+    testIfPreviousArrayisaOperator('times');
+    equation.push('times');
+    document.getElementById("equation").innerText += '*';
+    document.getElementById("Textarea").innerText = '';
 }
 
 function buttonDivide() {
-    ifNum2exists();
-    oper = 'divide'
-    equation = equation + '/';
-    document.getElementById("Textarea").innerText = num1;
-    equation = equation + value;
-    document.getElementById("equation") .innerText = equation;
+    pushNumberfromTextAreatoArray()
+    testIfPreviousArrayisaOperator('divide');
+    equation.push('divide');
+    document.getElementById("equation").innerText += '/';
+    document.getElementById("Textarea").innerText = '';
 }
 
 function buttonEquals() {
-    if (num1 == ''){
-        num1 = '0';
-    }
-    if(num2 == ''){
-        num2 = '0';
-    }
-    if (oper == ''){
-        document.getElementById("Textarea").innerText = 0;
-    }
-    else{
-        document.getElementById("Textarea").innerText = calculate(num1,oper,num2);
-    }
-    num2 = '';
-    oper = '';
-    equation = equation + '=';
-    document.getElementById("equation") .innerText = equation;
-    equation = num1;   
+    pushNumberfromTextAreatoArray();
+    calculate();   
 }
 
