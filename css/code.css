@@ -230,8 +230,8 @@ p {
     display: grid;
     width: 300px;
     size : 100px;
-    grid-template-columns: 100px 100px 100px 100px ;
-    grid-template-rows: 100px 100px 100px 100px 100px;
+    grid-template-columns: 80px 80px 80px 80px 80px;
+    grid-template-rows: 80px 80px 80px 80px 80px 80px;
     }
 
 button{
@@ -239,10 +239,7 @@ button{
     font-size: x-large;
 
 }
-#equals{
-    grid-row: 2 / 6;
-    grid-column: 4;
-}
+
 #Calc{
     display:flex;
     width: 420px;
