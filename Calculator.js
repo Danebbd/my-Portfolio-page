@@ -1,4 +1,3 @@
-/* Variables*/
 let equation = [];
 const newEquation = [];
 let isEqualsPressed = 0;
@@ -149,6 +148,7 @@ let factorialize = (num) => {
 /*Buttons*/
 let buttonPowerOfTwo = () => {
     testifEqualsisPressedthenChangeEquation();
+    pushNumberfromTextAreatoArray();
     equation.push('powerOfTwo');
     let oldEquation = document.getElementById("equation").innerText;
     document.getElementById("equation").innerText += '^2';
@@ -157,6 +157,7 @@ let buttonPowerOfTwo = () => {
 
 let buttonExponetial = () => {
     testifEqualsisPressedthenChangeEquation();
+    pushNumberfromTextAreatoArray();
     equation.push('powerOf');
     document.getElementById("equation").innerText += '^';
     document.getElementById("Textarea").innerText = '' ;
