@@ -38,14 +38,16 @@ let calculate = (useEquation) => {
     for (let i = 0 ; i < lenghtOfarray ; i++){
         if (useEquation[i]  == 'powerOfTwo') {
             let result = Math.pow(parseFloat(useEquation[i-1]),2);
+            console.log(result);
             useEquation[i] = result;
-            useEquation.splice(i+1,1);
+            useEquation.splice(i-1,1);
         }
     }
     for (let i = 0 ; i < lenghtOfarray ; i++){
         if (useEquation[i]  == 'powerOf') {
             let result = Math.pow(parseFloat(useEquation[i-1]),parseFloat(useEquation[i+1]));
             useEquation[i] = result;
+            useEquation.splice(i-1,1);
             useEquation.splice(i+1,1);
         }
     }
@@ -150,7 +152,6 @@ let buttonPowerOfTwo = () => {
     testifEqualsisPressedthenChangeEquation();
     pushNumberfromTextAreatoArray();
     equation.push('powerOfTwo');
-    let oldEquation = document.getElementById("equation").innerText;
     document.getElementById("equation").innerText += '^2';
     document.getElementById("Textarea").innerText = '' ;    
 }
